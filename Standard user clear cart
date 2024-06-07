@@ -1,0 +1,7 @@
+scenario 'Standard user clear cart' do
+  call given 'user logs in with valid credentials'
+  call when 'step {action: Select the item ${id}}' (id1 = "Sauce Labs Backpack")
+  call and 'Result Check that cart contains 1 item'
+  call then 'Remove from checkout'
+  call and 'Check that cart contains "qty" items' (qty = "0")
+end
