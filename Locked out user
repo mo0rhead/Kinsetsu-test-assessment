@@ -1,0 +1,7 @@
+scenario 'Locked out user' do
+  call given 'SwagLabs login screen'
+  call when 'user logs in with locked out user credentials'
+  call then 'user will not be taken to the inventory page'
+  call and 'error message will appear'
+  call and 'user can attempt to login again'
+end
