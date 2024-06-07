@@ -1,0 +1,15 @@
+| Dataset name | Item_ID |
+| Sauce Labs Backpack | id=4 |
+| Sauce Labs Bike Light | id=0 |
+| Sauce Labs Bolt T-Shirt | id=1 |
+| Sauce Labs Fleece Jacket | id=5 |
+| Sauce Labs Onesie | id=2 |
+| Test.allTheThings() T-Shirt (Red) | id=3 |
+
+scenario 'Open item page' do
+  call given 'user logs in with valid credentials'
+  call when 'user selects an item within the inventory page'
+  call and 'Call select "p1"' (p1 = "item_ID")
+  call then 'item page will appear'
+  call and 'user can use Back to return to Inventory'
+end
