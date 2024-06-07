@@ -1,0 +1,17 @@
+scenario 'Standard user complete purchase' do
+  call given 'user logs in with valid credentials'
+  call and 'inventory page will be fully visible'
+  call when 'user logs in with valid credentials'
+  call then 'step {action: Select the item ${id}}' (id1 = "Sauce Labs Backpack")
+  call 'Result Check that cart contains 1 item'
+  call then 'step {action: Select the item ${id}}' (id2 = "Sauce Labs Backpack")
+  call 'Result Check that cart contains 2 items'
+  call then 'select Checkout'
+  call and 'Enter First Name' (__free_text = "test name")
+  call and 'Enter Last Name' (__free_text = "test surname")
+  call and 'Enter Zip/Postal Code' (__free_text = "BT1 1JN")
+  call then 'Click Next'
+  call and 'Click Finish'
+  call and 'view confirmation message'
+  call and 'basket will be empty'
+end
