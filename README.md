@@ -15,6 +15,7 @@ Main functions being:
    - 5 scenarios
    - 'Standard user login' contains tests for the 4 provided usernames with datatable links
    - 'Open item page' contains tests for 6 items stored with datatable links
+   - A link to the project is included on this readme and the Gherkin scripts have been included on the Main branch of this repository
 
 2. **Testing approach**
    - Folders have been divided by basic functionality
